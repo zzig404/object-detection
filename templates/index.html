@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+     <h3 class="text-dark font-weight-boldest text-center p-5  pb-4" >OBJECT DETECTION USING inceptionv3.</h3>
+    <div class="row top-border" style="background:#e6d3dd">
+        <div class="col-md-6 p-0">
+            <div class="" style="background:#c92c5b">
+                 <div class="container p-3" >
+                    <div class="container pb-2">
+                        <h4 class="text-white">Upload a video</h4>
+                    </div>
+                    <form class="d-flex" method="POST"  enctype="multipart/form-data"> 
+                        <input type="file" class="form-control form-control-sm w-50 rounded-0" name="videoInput">
+                        <button type="submit" style="background:#af5dcf; padding-left:20px; padding-right:20px; margin-left:20px" class="btn btn-sm text-dark rounded-0">
+                        Submit and Analyse Video</button> 
+                   </form>
+                </div>
+            </div>
+            <div class="">
+                
+                <div class="container">
+                    <div class="p-5 pb-1">
+                        <h5  class="pb-1 pt-5 text-uppercase">Search for objects in the videos </h5>
+                    </div>
+                    <form class="p-4 d-flex" method="POST" action="/search" >
+                        <input type="text" class="form-control form-control-sm rounded-0" name="searchInput" placeholder="Search for objects in the videos. ... ">
+                        <button type="submit" style="background:#214575; padding-left:20px; padding-right:20px; margin-left:20px" class="btn btn-sm text-white rounded-0">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" style="border-left: 1px solid rgb(184, 33, 33)">
+            <div class="container mb-4">
+                <h4 class="text-center p-2"> {{detected_objects|length}}  Objects Detected</h4>
+                <p class="text-dark text-center m-1" style="font-size:12px">Scroll down the list to explore detected objects</p>
+                <div class="rounded objects-scroll ">
+                    <ul class="list-unstyled container list-group">
+                        {% for obj in detected_objects %}
+                            <a href="{{ url_for('search_by_id', text=obj) }}" class="text-dark list-group-item">{{obj}}</a>
+                        {%endfor%}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+{% endblock %}
