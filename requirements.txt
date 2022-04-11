@@ -123,7 +123,6 @@ kiwisolver
 lazy-object-proxy
 libarchive-c
 libclang==13.0.0
-llvmlite==0.37.0
 locket==0.2.1
 lxml
 Markdown==3.3.6
