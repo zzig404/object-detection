@@ -41,7 +41,6 @@ chardet
 charset-normalizer==2.0.12
 click==7.1.2
 cloudpickle
-clyent==1.2.2
 colabcode==0.3.0
 colorama
 comtypes==1.1.10
