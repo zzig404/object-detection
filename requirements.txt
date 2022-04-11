@@ -46,7 +46,6 @@ colorama
 comtypes==1.1.10
 conda-content-trust
 conda-pack
-conda-repo-cli
 conda-token
 conda-verify==3.4.2
 contextlib2
