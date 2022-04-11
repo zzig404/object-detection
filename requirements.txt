@@ -198,7 +198,6 @@ pyls-spyder==0.4.0
 Pympler==1.0.1
 PyNaCl
 pyngrok==5.1.0
-
 pyOpenSSL
 pyparsing
 pyreadline==2.1
@@ -212,8 +211,6 @@ python-lsp-server==1.2.4
 python-slugify
 pytz==2021.3
 pytz-deprecation-shim==0.1.0.post0
-pywin32==228
-pywin32-ctypes
 pywinpty
 PyYAML==6.0
 pyzmq
